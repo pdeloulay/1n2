@@ -1,5 +1,6 @@
 package main
 
+// Best import
 import (
 	"html/template"
 	"log"
@@ -30,8 +31,8 @@ func HomePage(w http.ResponseWriter, r *http.Request) {
 
 	now := time.Now()              // find the time right now
 	HomePageVars := PageVariables{ //store the date and time in a struct
-		Date: now.Format("02-JAN-2006"),
-		Time: now.Format("12:04:05"),
+		Date: now.Format("02-JAN-2018"),
+		Time: now.Format("12:04"),
 	}
 
 	t, err := template.ParseFiles("1n2.gohtml") //parse the html file 1n2.html
